@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus Language Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="flex flex-column">
+          <div class="flex flex-gap">
+            <img src="assets/logo.png" alt="Lotus Language Logo" />
+            <h1>Lotus</h1>
+          </div>
+          <p>A simple and intuitive programming language.</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#primitives">Primitive Types</a></li>
+                <li><a href="#array">Array</a></li>
+                <li><a href="#struct">Struct</a></li>
+                <li><a href="#conditionals">Conditionals</a></li>
+                <li><a href="#loops">Loops</a></li>
+                <li><a href="#funcoes">Functions</a></li>
+                <li><a href="#builtin">Built-in</a></li>
+                <li><a href="#comentarios">Comments</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Variables -->
+            <section id="variables">
+                <h2>Variables</h2>
+                
+                <div class="construct">
+                    <h3><code>var</code></h3>
+                    <p>Variable declaration with value assignment.</p>
+                    <pre><code>var x = 10;
+var name = "John";
+var isActive = true;
+var count = 0;
+x = 20;  // Reassignment</code></pre>
+                </div>
+            </section>
+
+            <!-- Primitive Types -->
+            <section id="primitives">
+                <h2>Primitive Types</h2>
+                
+                <div class="construct">
+                    <h3><code>number</code></h3>
+                    <p>Integer or floating-point numbers.</p>
+                    <pre><code>var integer = 42;
+var float = 3.14159;
+var negative = -10;</code></pre>
+                </div>
+
+                <div class="construct">
+                    <h3><code>string</code></h3>
+                    <p>Text values enclosed in double quotes.</p>
+                    <pre><code>var greeting = "Hello, World!";
+var name = "Lotus";
+var message = "Welcome to Lotus programming!";</code></pre>
+                </div>
+
+                <div class="construct">
+                    <h3><code>boolean</code></h3>
+                    <p>Logical values: true or false.</p>
+                    <pre><code>var isActive = true;
+var isComplete = false;
+var hasPermission = true;</code></pre>
+                </div>
+
+                <div class="construct">
+                    <h3><code>null</code></h3>
+                    <p>Represents the absence of a value.</p>
+                    <pre><code>var empty = null;
+var result = null;
+var data = null;</code></pre>
+                </div>
+            </section>
+
+            <!-- Array -->
+            <section id="array">
+                <h2>Array</h2>
+                
+                <div class="construct">
+                    <h3><code>array</code></h3>
+                    <p>Ordered collection of values with indexed access.</p>
+                    <pre><code>// Array literal
+var numbers = [1, 2, 3, 4, 5];
+var names = ["Alice", "Bob", "Charlie"];
+var mixed = [1, "two", true, [4, 5]];
+
+// Index access
+var first = numbers[0];     // 1
+var second = numbers[1];    // 2
+var name = names[2];        // "Charlie"
+numbers[0] = 10;            // Modify element</code></pre>
+                </div>
+            </section>
+
+            <!-- Struct -->
+            <section id="struct">
+                <h2>Struct</h2>
+                
+                <div class="construct">
+                    <h3><code>struct</code></h3>
+                    <p>Defines a structure with named fields. Access and modify fields using dot notation.</p>
+                    <pre><code>// Struct literal
+var user = struct { name: "Ana", age: 30 };
+var point = struct { x: 10, y: 20 };
+var book = struct { title: "Lotus", pages: 200, published: true };
+
+// Member access
+var userName = user.name;  // "Ana"
+var userAge = user.age;    // 30
+var pointX = point.x;      // 10
+
+// Field assignment
+user.age = 31;
+user.name = "Ana Silva";
+point.x = 15;
+point.y = 25;</code></pre>
+                </div>
+            </section>
+
+
+            <!-- Conditionals -->
+            <section id="conditionals">
+                <h2>Conditionals</h2>
+                
+                <div class="construct">
+                    <h3><code>if / else</code></h3>
+                    <p>Conditional structure that executes a block if the condition is true.</p>
+                    <pre><code>if (x &lt; y) {
+    print("x is smaller");
+} else {
+    print("y is smaller or equal");
+}
+
+var max = if (a &gt; b) { a; } else { b; };
+
+if (age &gt;= 18) {
+    print("Adult");
+} else {
+    print("Minor");
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Loops -->
+            <section id="loops">
+                <h2>Loops</h2>
+                
+                <div class="construct">
+                    <h3><code>for</code></h3>
+                    <p>Loop structure with initialization, condition, and increment.</p>
+                    <pre><code>for (var i = 0; i &lt; 10; i = i + 1) {
+    print(i);
+}
+
+for (var j = 0; j &lt; len(arr); j = j + 1) {
+    print(arr[j]);
+}</code></pre>
+                </div>
+
+                <div class="construct">
+                    <h3><code>while</code></h3>
+                    <p>Loop structure that repeats while the condition is true.</p>
+                    <pre><code>var i = 10;
+while (i &gt; 0) {
+    print(i);
+    i = i - 1;
+}
+
+var count = 5;
+while (count &gt; 0) {
+    print(count);
+    count = count - 1;
+}</code></pre>
+                </div>
+            </section>
+
+            <!-- Functions -->
+            <section id="funcoes">
+                <h2>Functions</h2>
+                
+                <div class="construct">
+                    <h3><code>function</code></h3>
+                    <p>Define and call functions to encapsulate reusable code.</p>
+                    <pre><code>// Define functions
+var add = function(x, y) {
+    return x + y;
+};
+
+var greet = function(name) {
+    return "Hello, " + name + "!";
+};
+
+var incrementAge = function(user) {
+    user.age = user.age + 1;
+};
+
+// Call functions
+var sum = add(5, 3);           // 8
+var message = greet("Alice");  // "Hello, Alice!"
+
+var person = struct { name: "John", age: 25 };
+incrementAge(person);          // person.age is now 26</code></pre>
+                </div>
+            </section>
+
+            <!-- Built-in Functions -->
+            <section id="builtin">
+                <h2>Built-in Functions</h2>
+                
+                <div class="construct">
+                    <h3><code>len</code></h3>
+                    <p>Returns the size of a string or array.</p>
+                    <pre><code>var strLength = len("hello");  // 5
+var arrLength = len([1, 2, 3, 4, 5]);  // 5
+var emptyLength = len([]);  // 0</code></pre>
+                </div>
+
+                <div class="construct">
+                    <h3><code>first</code></h3>
+                    <p>Returns the first element of an array.</p>
+                    <pre><code>var firstNum = first([1, 2, 3]);  // 1
+var firstName = first(["Alice", "Bob", "Charlie"]);  // "Alice"</code></pre>
+                </div>
+
+                <div class="construct">
+                    <h3><code>last</code></h3>
+                    <p>Returns the last element of an array.</p>
+                    <pre><code>var lastNum = last([1, 2, 3]);  // 3
+var lastName = last(["Alice", "Bob", "Charlie"]);  // "Charlie"</code></pre>
+                </div>
+
+                <div class="construct">
+                    <h3><code>push</code></h3>
+                    <p>Adds an element to the end of an array.</p>
+                    <pre><code>var arr = [1, 2];
+var newArr = push(arr, 3);  // [1, 2, 3]
+
+var names = ["Alice", "Bob"];
+var updated = push(names, "Charlie");  // ["Alice", "Bob", "Charlie"]</code></pre>
+                </div>
+
+                <div class="construct">
+                    <h3><code>print</code></h3>
+                    <p>Prints values to the console.</p>
+                    <pre><code>print "hello world";
+print "The result is: " + result;
+print 42;
+print [1, 2, 3];</code></pre>
+                </div>
+            </section>
+
+            <!-- Comments -->
+            <section id="comentarios">
+                <h2>Comments</h2>
+                
+                <div class="construct">
+                    <h3><code>//</code></h3>
+                    <p>Comments.</p>
+                    <pre><code>// This is a comment
+var x = 10;  // Inline comment
+
+// Comments are ignored by the interpreter
+// They are useful for documentation</code></pre>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Lotus Language Documentation. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <a href="#" class="scroll-to-top" title="Back to top">↑</a>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Smooth scroll to top
+        document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Show/hide scroll to top button based on page position
+        window.addEventListener('scroll', function() {
+            const scrollBtn = document.querySelector('.scroll-to-top');
+            if (window.pageYOffset > 300) {
+                scrollBtn.style.display = 'flex';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
