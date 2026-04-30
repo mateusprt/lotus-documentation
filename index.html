@@ -113,20 +113,17 @@ numbers[0] = 10;            // Modify element</code></pre>
                     <h3><code>struct</code></h3>
                     <p>Defines a structure with named fields. Access and modify fields using dot notation.</p>
                     <pre><code>// Struct literal
-var user = struct { name: "Ana", age: 30 };
-var point = struct { x: 10, y: 20 };
-var book = struct { title: "Lotus", pages: 200, published: true };
+struct User { name; age };
+var user = User();
 
+// Field assignment
+user.age = 30;
+user.name = "Ana";
+                        
 // Member access
 var userName = user.name;  // "Ana"
 var userAge = user.age;    // 30
-var pointX = point.x;      // 10
-
-// Field assignment
-user.age = 31;
-user.name = "Ana Silva";
-point.x = 15;
-point.y = 25;</code></pre>
+</code></pre>
                 </div>
             </section>
 
