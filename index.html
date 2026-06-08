@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lotus Language Documentation</title>
     <link rel="stylesheet" href="styles.css">
-        
-    </style>
 </head>
 <body>
     <div class="container">
@@ -20,6 +18,7 @@
 
         <nav>
             <ul>
+                <li><a href="#overview">Syntax Overview</a></li>
                 <li><a href="#variables">Variables</a></li>
                 <li><a href="#primitives">Primitive Types</a></li>
                 <li><a href="#array">Array</a></li>
@@ -33,6 +32,67 @@
         </nav>
 
         <main>
+            <section id="overview">
+                <h2>Syntax Overview</h2>
+                <p class="section-intro">A quick reference with complete examples of every core Lotus structure.</p>
+
+                <div class="construct overview-single">
+                    <pre><code>// Variables
+var score = 10;
+score = 20;
+
+// Primitive Types
+var amount = 42;
+var title = "Lotus";
+var enabled = true;
+var empty = null;
+
+// Array
+var items = [1, 2, 3];
+var firstItem = items[0];
+items[1] = 99;
+
+// Struct
+var user = struct { name: "Ana", age: 30 };
+print user.name;
+user.age = 31;
+
+// Conditionals
+if (score &gt;= 10) {
+    print "approved";
+} else {
+    print "review";
+}
+
+// Loops
+for (var i = 0; i &lt; 3; i = i + 1) {
+    print i;
+}
+
+while (score &gt; 0) {
+    score = score - 1;
+}
+
+// Functions
+fn soma(a, b) {
+    return a + b;
+}
+
+var total = soma(5, 3);
+
+// Built-in
+len([1, 2, 3]);
+first([1, 2, 3]);
+last([1, 2, 3]);
+push([1, 2], 3);
+print "hello";
+
+// Comments
+// Single-line comment
+var x = 10; // Inline comment</code></pre>
+                </div>
+            </section>
+
             <!-- Variables -->
             <section id="variables">
                 <h2>Variables</h2>
@@ -192,24 +252,24 @@ while (count &gt; 0) {
                 <h2>Functions</h2>
                 
                 <div class="construct">
-                    <h3><code>function</code></h3>
-                    <p>Define and call functions to encapsulate reusable code.</p>
+                    <h3><code>fn</code></h3>
+                    <p>Declare named functions with <code>fn</code> and call them directly by name.</p>
                     <pre><code>// Define functions
-var add = function(x, y) {
-    return x + y;
-};
+fn soma(a, b) {
+    return a + b;
+}
 
-var greet = function(name) {
+fn saudacao(name) {
     return "Hello, " + name + "!";
-};
+}
 
-var incrementAge = function(user) {
+fn incrementAge(user) {
     user.age = user.age + 1;
-};
+}
 
 // Call functions
-var sum = add(5, 3);           // 8
-var message = greet("Alice");  // "Hello, Alice!"
+var sum = soma(5, 3);             // 8
+var message = saudacao("Alice"); // "Hello, Alice!"
 
 var person = struct { name: "John", age: 25 };
 incrementAge(person);          // person.age is now 26</code></pre>

@@ -100,6 +100,16 @@ main {
   padding: 40px;
 }
 
+.section-intro {
+	color: #5b6472;
+	font-size: 1.05em;
+	margin-bottom: 24px;
+}
+
+.overview-single {
+	margin-top: 24px;
+}
+
 section {
 	margin-bottom: 50px;
 	scroll-margin-top: 80px;
