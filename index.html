@@ -53,7 +53,7 @@ var firstItem = items[0];
 items[1] = 99;
 
 // Struct
-struct Person { name; age; };
+struct Person { name; age; }
 var user = Person()
 user.name = "Some name";
 user.age = 31;
@@ -175,24 +175,18 @@ numbers[0] = 10;            // Modify element</code></pre>
                     <p>Defines a structure with named fields. Access and modify fields using dot notation.</p>
                     <pre><code>// Struct literal
 struct User { name; age; }
-struct Point { x;y; };
+
+// Instantiate struct
+var user = User();
 
 // Field assignment
 user.age = 30;
 user.name = "Ana";
-                        
-// Member access
-var user = User();
+
+// Field access
 var userName = user.name;  // "Ana"
 var userAge = user.age;    // 30
-var point = Point();
-var pointX = point.x;      // 10
-
-// Field assignment
-user.age = 31;
-user.name = "Ana Silva";
-point.x = 15;
-point.y = 25;</code></pre>
+</code></pre>
                 </div>
             </section>
 
@@ -209,14 +203,7 @@ point.y = 25;</code></pre>
 } else {
     print("y is smaller or equal");
 }
-
-var max = if (a &gt; b) { a; } else { b; };
-
-if (age &gt;= 18) {
-    print("Adult");
-} else {
-    print("Minor");
-}</code></pre>
+</code></pre>
                 </div>
             </section>
 
@@ -265,7 +252,7 @@ fn soma(a, b) {
     return a + b;
 }
 
-fn saudacao(name) {
+fn sayHello(name) {
     return "Hello, " + name + "!";
 }
 
@@ -275,10 +262,8 @@ fn incrementAge(user) {
 
 // Call functions
 var sum = soma(5, 3);             // 8
-var message = saudacao("Alice"); // "Hello, Alice!"
-
-var person = struct { name: "John", age: 25 };
-incrementAge(person);          // person.age is now 26</code></pre>
+var message = sayHello("Alice"); // "Hello, Alice!"
+</code></pre>
                 </div>
             </section>
 
