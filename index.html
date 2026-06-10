@@ -53,20 +53,21 @@ var firstItem = items[0];
 items[1] = 99;
 
 // Struct
-var user = struct { name: "Ana", age: 30 };
-print user.name;
+struct Person { name; age; };
+var user = Person()
+user.name = "Some name";
 user.age = 31;
 
 // Conditionals
 if (score &gt;= 10) {
-    print "approved";
+    print("approved");
 } else {
-    print "review";
+    print("review");
 }
 
 // Loops
 for (var i = 0; i &lt; 3; i = i + 1) {
-    print i;
+    print(i);
 }
 
 while (score &gt; 0) {
@@ -85,7 +86,7 @@ len([1, 2, 3]);
 first([1, 2, 3]);
 last([1, 2, 3]);
 push([1, 2], 3);
-print "hello";
+print("hello");
 
 // Comments
 // Single-line comment
@@ -155,7 +156,7 @@ var data = null;</code></pre>
                     <pre><code>// Array literal
 var numbers = [1, 2, 3, 4, 5];
 var names = ["Alice", "Bob", "Charlie"];
-var mixed = [1, "two", true, [4, 5]];
+var mixed = [1, "two", true];
 
 // Index access
 var first = numbers[0];     // 1
@@ -173,13 +174,14 @@ numbers[0] = 10;            // Modify element</code></pre>
                     <h3><code>struct</code></h3>
                     <p>Defines a structure with named fields. Access and modify fields using dot notation.</p>
                     <pre><code>// Struct literal
-var user = struct { name: "Ana", age: 30 };
-var point = struct { x: 10, y: 20 };
-var book = struct { title: "Lotus", pages: 200, published: true };
+struct User { name; age; }
+struct Point { x;y; };
 
 // Member access
+var user = User();
 var userName = user.name;  // "Ana"
 var userAge = user.age;    // 30
+var point = Point();
 var pointX = point.x;      // 10
 
 // Field assignment
